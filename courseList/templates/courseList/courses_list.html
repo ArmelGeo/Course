@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+
+{% block content%}
+
+
+<h1> Course function view</h1>
+
+ <ul>  
+     
+     <table>
+            <tr> 
+                <th>Название </th> 
+                <th> Описание</th>
+                <th> Дата начала</th>
+                <th> Дата окончания</th>
+            </tr> 
+            {% for courses in object_list %}
+            <tr>
+                  
+                <td>{{ courses.title }}</td>
+                <td>{{courses.body}} </td>
+                <td>{{courses.startDate | date:"SHORT_DATE_FORMAT"}} </td>
+                <td>{{courses.endDate | date:"SHORT_DATE_FORMAT"}} </td>
+                <td> | <a href="{% url 'courseList:edit' courses.id %}">edit</a> | 
+                    <a href="{% url 'courseList:delete' courses.id %}">delete</a>  
+                </td>
+                
+            </tr>
+            {% endfor %}
+    </table>  
+       
+ </ul>  
+   
+<br>
+
+<a href="courses_create_form.html">Create New</a>
+
+
+
+{% endblock content%} 
+
+
+
+
+
