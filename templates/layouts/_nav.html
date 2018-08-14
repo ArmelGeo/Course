@@ -1,5 +1,15 @@
-<ul> 
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'courseList:courses_list' %}">Courses</a></li>
-    <li><a href="{% url 'courseList:create' %}">Create a new course</a></li>
-</ul>
+<nav class="navbar">
+
+    <div class="wrapper">
+        <a href="{% url 'home' %} " class="navbar-brand">XFalcon</a>
+        
+        <ul class="navbar-right"> 
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'courseList:courses_list' %}">Courses</a></li>
+            <li><a href="{% url 'courseList:create' %}">Create a new course</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+

@@ -23,7 +23,8 @@ app_name = 'courseList'
 urlpatterns = [  
     url('admin/', admin.site.urls),  
     url('', views.courses_list, name='courses_list'),  
+    url(r'^detail/(?P<id>[0-9]+)$', views.courses_detail, name='detail'), 
     url(r'^create/$', views.courses_create, name='create'),  
-    url(r'^edit/(?P<pk>[0-9]+)$', views.courses_edit, name='edit'),  
-    url(r'^delete/(?P<pk>[0-9]+)$', views.courses_delete, name='delete'),
+   # url(r'^edit/(?P<pk>[0-9]+)$', views.courses_edit, name='edit'),  
+   # url(r'^delete/(?P<pk>[0-9]+)$', views.courses_delete, name='delete'),
 ]

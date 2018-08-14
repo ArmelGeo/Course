@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html'%}
+{% load static %}
+
+{% block title %} Courses {% endblock%}
+
+{% block content %}
+    <h1>Course #{{courses.id}} details</h1>
+
+    <p> {{courses.body}}</p>
+
+    <hr>
+    <p><a href="{%url 'courseList:course_list'%}"> all courses</a></p>
+
+{% endblock %}

@@ -11,17 +11,11 @@ class Courses(models.Model):
     body = models.TextField()
     startDate = models.DateTimeField()
     endDate = models.DateTimeField()
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
+    created_at = models.DateTimeField(auto_now = True)
+    updated_at = models.DateTimeField(auto_now_add = True)
 
-
-    # @classmethod
-    # def create_course(cls, title):
-    #     course = cls(title=title)
-    #     # do something with the book
-    #     return course
 
     def __str__(self):
-        return self.__str__
+        return self.title
 
 
